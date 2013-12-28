@@ -2,6 +2,8 @@ package werl.plugins.usefulcommands;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import werl.plugins.usefulcommands.commands.ClearHandCommandExecutor;
+
 public class UsefulCommands extends JavaPlugin
 {
 
@@ -9,7 +11,7 @@ public class UsefulCommands extends JavaPlugin
 	public void onEnable()
 	{
 		getLogger().info("Useful Commands has been enabled!");
-		getCommand("clearhand").setExecutor(new UsefulCommandExecutor(this));
+		getCommand("clearhand").setExecutor(new ClearHandCommandExecutor(this));
 	}
 
 	@Override

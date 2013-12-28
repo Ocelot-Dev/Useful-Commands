@@ -1,15 +1,17 @@
-package werl.plugins.usefulcommands;
+package werl.plugins.usefulcommands.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class UsefulCommandExecutor implements CommandExecutor
+import werl.plugins.usefulcommands.UsefulCommands;
+
+public class ClearHandCommandExecutor implements CommandExecutor
 {
 	private final UsefulCommands plugin;
 
-	public UsefulCommandExecutor(UsefulCommands plugin)
+	public ClearHandCommandExecutor(UsefulCommands plugin)
 	{
 		this.plugin = plugin;
 	}
