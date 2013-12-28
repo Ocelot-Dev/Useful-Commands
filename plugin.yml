@@ -1,0 +1,13 @@
+name: Kits
+main: werl.plugins.usefulcommands.UseulCommands
+version: 0.0.1
+depend: []
+description: >
+             Kits plugin.
+commands:
+  clearhand:
+    description: Clear the item currently in your hand
+permissions:
+  usefulcommands.clearhand:
+    description: Allow players to clear the item in their hand.
+    default: op
