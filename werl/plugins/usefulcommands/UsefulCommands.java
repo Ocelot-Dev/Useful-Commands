@@ -3,10 +3,12 @@ package werl.plugins.usefulcommands;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import werl.plugins.usefulcommands.commands.ClearHandCommandExecutor;
+import werl.plugins.usefulcommands.utils.PermissionNodeName;
 
 public class UsefulCommands extends JavaPlugin
 {
-
+	public static PermissionNodeName nodes = new PermissionNodeName();
+	
 	@Override
 	public void onEnable()
 	{

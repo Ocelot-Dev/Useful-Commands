@@ -7,18 +7,11 @@ import org.bukkit.entity.Player;
 
 import werl.plugins.usefulcommands.UsefulCommands;
 
-public class ClearHandCommandExecutor implements CommandExecutor
+public class ClearHandCommandExecutor extends UsefulExecutor
 {
-	private final UsefulCommands plugin;
-
 	public ClearHandCommandExecutor(UsefulCommands plugin)
 	{
-		this.plugin = plugin;
-	}
-	
-	public boolean hasPerm(Player player, String perm)
-	{
-		return true;
+		super(plugin);
 	}
 
 	@Override
@@ -29,7 +22,12 @@ public class ClearHandCommandExecutor implements CommandExecutor
 			if(sender instanceof Player)
 			{
 				Player player = (Player)sender;
-				if(args[0] != null && args[0].equalsIgnoreCase("y"))
+				if(!this.hasPerm(player, plugin.nodes.clearhand))
+				{
+					return true;
+				}
+				if(args == null || args[0] == null) return false;
+				if(args[0].equalsIgnoreCase("y"))
 				{
 					player.getInventory().setItemInHand(null);
 					return true;
