@@ -18,7 +18,13 @@ public abstract class UsefulExecutor implements CommandExecutor
 	
 	public boolean hasPerm(Player player, String perm)
 	{
-		return true;
+		if(player.hasPermission(perm))
+			return true;
+		else
+		{
+			sendNoPerm(player, perm);
+			return false;
+		}
 	}
 	
 	public void sendNoPerm(Player player, String commandName)
