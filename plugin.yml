@@ -1,7 +1,6 @@
 name: Useful Commands
-main: werl.plugins.usefulcommands.UseulCommands
+main: werl.plugins.usefulcommands.UsefulCommands
 version: 0.1.0
-depend: []
 description: >
              A bunch of useful commands that I have put together
 commands:
@@ -11,7 +10,6 @@ commands:
     description: Kits help and a list of kits.
   kit:
     description: Kits help
-
 permissions:
   usefulcommands.clearhand:
     description: Allow players to clear the item in their hand.
