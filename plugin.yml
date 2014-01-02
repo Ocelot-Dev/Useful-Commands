@@ -1,13 +1,30 @@
-name: Kits
+name: Useful Commands
 main: werl.plugins.usefulcommands.UseulCommands
-version: 0.0.1
+version: 0.1.0
 depend: []
 description: >
-             Kits plugin.
+             A bunch of useful commands that I have put together
 commands:
   clearhand:
     description: Clear the item currently in your hand
+  kits:
+    description: Kits help and a list of kits.
+  kit:
+    description: Kits help
+
 permissions:
   usefulcommands.clearhand:
     description: Allow players to clear the item in their hand.
+    default: op
+  kits.admin:
+    description: Allows players to modify kits and reload the plugin.
+    default: op
+  kits.spawn:
+    description: Allows players to spawn kits.
+    default: op
+  kits.spawn.others:
+    description: Allows players to spawn kits for other players.
+    default: op
+  kits.bypassdelay:
+    description: Allows players to bypass the kit spawn delay.
     default: op
